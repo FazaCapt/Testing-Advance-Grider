@@ -23,3 +23,8 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 > npm install
 > npm start
 ```
+
+
+#### Resource:
+
+1. Chai Jquery (buat testing): https://github.com/chaijs/chai-jquery
