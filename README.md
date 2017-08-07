@@ -29,3 +29,4 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 
 1. Chai Jquery (buat testing): https://github.com/chaijs/chai-jquery
 2. ChaiJs Library: http://chaijs.com/api/bdd/
+3. jsDom: https://github.com/tmpvar/jsdom
