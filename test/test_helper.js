@@ -2,6 +2,11 @@ import jsdom from 'jsdom';
 import jquery from 'jquery';
 import TestUtils from 'react-addons-test-utils';
 import ReactDOM from 'react-dom';
+import { expect } from 'chai';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducers from '../src/reducers';
 
 
 // Set up testing environtment to run like a browser in the command line
@@ -12,7 +17,11 @@ const $ = jquery(global.window);
 
 // build 'renderComponent' helper that should render a given react class
 function renderComponent(ComponentClass) {
-  const componnentInstance = TestUtils.renderIntoDocument(<ComponentClass />)
+  const componnentInstance = TestUtils.renderIntoDocument(
+  <Provider store={createStore(reducers)}>  
+    <ComponentClass />
+  </Provider>
+)
 
   return $(ReactDOM.findDOMNode(componnentInstance)); // produces HTML
 }
@@ -24,3 +33,5 @@ function renderComponent(ComponentClass) {
 
 
 // set up chai-jquery
+
+export { renderComponent, expect };
