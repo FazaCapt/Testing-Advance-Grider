@@ -28,6 +28,14 @@ function renderComponent(ComponentClass, props, state) {
 }
 
 // build helper for simulting events
+$.fn.simulate = function(eventName, value) {
+   
+  TestUtils.Simulate[eventName](this[0]);
+  // TestUtils.Simulate.change(this[0]);
+}
+
+// to call simulate
+// $('div').simulate
 
 
 
